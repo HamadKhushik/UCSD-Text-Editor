@@ -18,7 +18,7 @@ public class MyLinkedList<E> extends AbstractList<E> {
 	public MyLinkedList() {
 		// TODO: Implement this method
 		size = 0;
-		head = new LLNode<E>(null);
+		head = new LLNode<E>(null); // sentinel nodes
 		tail = new LLNode<E>(null);
 		head.next = tail;
 		tail.prev = head;
