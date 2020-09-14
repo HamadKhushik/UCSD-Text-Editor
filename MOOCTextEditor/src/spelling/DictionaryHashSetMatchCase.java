@@ -70,12 +70,10 @@ public class DictionaryHashSetMatchCase implements Dictionary
 		if (words.contains(s)) return true;								// if the word is in dictionary, return
 		
 		if (firstCap) {													// if the word is not in dict, and first word is upper case, convert to lower case and return
-			//if (words.contains(s)) return true;						
-			//else return words.contains(s.toLowerCase());
 			return words.contains(s.toLowerCase());						// to account for words like Hello, 
 		}
+		
 		if (allCaps) {													// if all the letter are uppercase, 
-			
 			if (words.contains(s.toLowerCase())) return true;			// return true if word exists in lower case, to accomodate for HELLO
 			else {
 				return words.contains(s.substring(0,1) +  s.substring(1).toLowerCase());		// convert the first letter to uppercase and return
@@ -84,20 +82,4 @@ public class DictionaryHashSetMatchCase implements Dictionary
     	return words.contains(s);
 	}
 	
-    
-    
-    
-    
-    
-    
-    public static void main(String[] args) {
-    	DictionaryHashSetMatchCase test = new DictionaryHashSetMatchCase();
-    	test.addWord("Christine");
-    	if (test.isWord("christine")) System.out.println("IS WORD");
-    	
-    	String te = "Christine";
-    	
-    	System.out.println(te.substring(0,1).toUpperCase() + te.substring(1));
-    }
-   
 }
