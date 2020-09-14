@@ -12,6 +12,10 @@ public class DictionaryBST implements Dictionary
 	
     // TODO: Implement the dictionary interface using a TreeSet.  
  	// You'll need a constructor here
+   
+   public DictionaryBST() {
+	   dict = new TreeSet<String>();
+   }
 	
     
     /** Add this word to the dictionary.  Convert it to lowercase first
@@ -21,7 +25,9 @@ public class DictionaryBST implements Dictionary
      * (it wasn't already there). */
     public boolean addWord(String word) {
     	// TODO: Implement this method
-        return false;
+    	
+    	word = word.toLowerCase();
+        return dict.add(word);
     }
 
 
@@ -29,13 +35,23 @@ public class DictionaryBST implements Dictionary
     public int size()
     {
     	// TODO: Implement this method
-        return 0;
+        return dict.size();
     }
 
     /** Is this a word according to this dictionary? */
     public boolean isWord(String s) {
     	//TODO: Implement this method
-        return false;
+    	
+    	s = s.toLowerCase();
+        return dict.contains(s);
+    }
+    
+    public static void main(String[] args) {
+    	DictionaryBST test = new DictionaryBST();
+    	test.addWord("Hammad");
+    	test.addWord("hammad");
+    	System.out.println(test.size());
+    	if (test.isWord("Hammad")) System.out.println("true");
     }
 
 }

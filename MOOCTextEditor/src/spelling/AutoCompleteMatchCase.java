@@ -13,13 +13,13 @@ import java.util.LinkedList;
  * @author You
  *
  */
-public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
+public class AutoCompleteMatchCase implements  Dictionary, AutoComplete {
 
     private TrieNode root;
     private int size;
     
 
-    public AutoCompleteDictionaryTrie()
+    public AutoCompleteMatchCase()
 	{
 		root = new TrieNode();
 	}
@@ -42,9 +42,10 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
 	public boolean addWord(String word)
 	{
 	    //TODO: Implement this method.
-		word = word.toLowerCase();
-		char[] wordArray = word.toCharArray();
+		//word = word.toLowerCase();
 		TrieNode curr = root;
+		
+		char[] wordArray = word.toCharArray();									// create a char array of the word
 		
 		for (int i = 0; i < wordArray.length; i++) {
 			
@@ -85,9 +86,41 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
 	public boolean isWord(String s) 
 	{
 	    // TODO: Implement this method
-		TrieNode curr = root;
-		s = s.toLowerCase();
+		boolean allCaps, firstCap;										// boolean flags to keep track if first letter/all letters are upper case
+		allCaps = firstCap = false;
 		
+		if (s.equals(s.toUpperCase())) allCaps = true;					// if all the characters in a word are capital, set all caps to true
+		else if (Character.isUpperCase(s.charAt(0)) && 					// if only first char is capital, set firstCap to true
+				s.substring(1).equals(s.substring(1).toLowerCase()))
+		{
+			firstCap = true;
+		}
+		
+		
+		
+		if (matchCase(s)) return true;									// if the word is in dictionary, return
+		
+		if (firstCap) {													// if the word is not in dict, and first word is upper case, convert to lower case and return
+			//if (words.contains(s)) return true;						
+			//else return words.contains(s.toLowerCase());
+			return matchCase(s.toLowerCase());							// to account for words like Hello, 
+		}
+		if (allCaps) {													// if all the letter are uppercase, 
+			
+			if (matchCase(s.toLowerCase())) return true;				// return true if word exists in lower case, to accomodate for HELLO
+			else {
+				return matchCase(s.substring(0,1) +  s.substring(1).toLowerCase());		// convert the first letter to uppercase and return
+			}
+		}		
+		return false;
+		
+		
+	}
+	
+	// HELPER METHOD TO PERFORM BREADTH FIRST SEARCH ON MATCH CASE
+	private boolean matchCase(String s) {
+		TrieNode curr = root;
+
 		for (int i = 0; i < s.length(); i++) {
 			
 			if (curr.getChild(s.charAt(i)) != null)
@@ -108,6 +141,7 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
 		}
 		
 		return false;
+		
 	}
 
 	/** 
@@ -148,16 +182,49 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
     	 //       Add all of its child nodes to the back of the queue
     	 // Return the list of completions
     	 
-    	 prefix = prefix.toLowerCase();
+    	 //prefix = prefix.toLowerCase();
     	 List<String> prediction = new ArrayList<String>();				// to return predictions
+    	 int ref = getCase(prefix);
     	 
-    	 TrieNode stem = getStem(prefix);								// using helper method to find the stem for the prefix
+    	 
+    	 TrieNode stem = getStem(prefix.toLowerCase());								// using helper method to find the stem for the prefix
     	 if (stem == null) {											// if no stem found, return an empty List
     		 return prediction;
     	 }
     	     	 
     	 prediction = bfSearch(stem, numCompletions);					// using helper method to perform Breadth First Search on Trie Tree
+    	 
+    	 //if (ref == 1) {
+    		 for (int i = 0; i < prediction.size(); i++) {
+    			 String temp = prediction.get(i);
+    			 if (ref == 1) {
+    			 temp = temp.toUpperCase();
+    			 prediction.set(i, temp);
+    			 }
+    			 if (ref == 0) {
+    				 temp = temp.substring(0, 1).toUpperCase() + temp.substring(1);
+    				 prediction.set(i, temp);
+    			 }
+    			 if (ref == -1) {
+    				 temp = temp.toLowerCase();
+    				 prediction.set(i, temp);
+    			 }
+    		 }
+    	 //}
          return prediction;												// return the completed List
+     }
+     
+     // PRIVATE HELPER METHOD FOR PREDICT COMPLETIONS TO FIND THE CASE
+     private int getCase(String toCheck) {
+    	 
+
+ 		if (toCheck.equals(toCheck.toUpperCase())) return 1;					// return 1 if all upper case
+ 		else if (Character.isUpperCase(toCheck.charAt(0)) && 					// return 0 if first letter is upper case
+ 				toCheck.substring(1).equals(toCheck.substring(1).toLowerCase()))
+ 		{
+ 			return 0;
+ 		}
+ 		return -1;																// return -1 otherwise
      }
 
  	// For debugging
@@ -234,10 +301,13 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
  	
  	public static void main(String[] args) {
  		
- 		AutoCompleteDictionaryTrie test = new AutoCompleteDictionaryTrie();
- 		if(test.addWord("hello")) System.out.println("first statement");
- 		if (test.addWord("Helloo")) System.out.println("second statement");
- 		if(test.isWord("hell0o")) System.out.println("is word");
+ 		AutoCompleteMatchCase test = new AutoCompleteMatchCase();
+ 		if(test.addWord("Hello")) System.out.println("first statement");
+ 		if (test.addWord("HELLO")) System.out.println("second statement");
+ 		if (test.addWord("HELlo")) System.out.println("third statement");
+ 		if(test.isWord("Hello")) System.out.println("is word 1");
+ 		if(test.isWord("HELLO")) System.out.println("is word 2");
+ 		if(test.isWord("hello")) System.out.println("is word 3");
  	}
 
 	

@@ -14,7 +14,7 @@ public class DictionaryBenchmarking {
 
 	    // Run each test more than once to get bigger numbers and less noise.
 	    // You can try playing around with this number.
-	    int trials = 500;
+	    int trials = 1000;
 
 	    // The text to test on
 	    String dictFile = "data/dict.txt";
@@ -29,7 +29,7 @@ public class DictionaryBenchmarking {
 		
 		// The number of words to start with. 
 		// You can play around with this.
-		int start = 50000;
+		int start = 500;
 		
 		String notInDictionary = "notaword";
 		

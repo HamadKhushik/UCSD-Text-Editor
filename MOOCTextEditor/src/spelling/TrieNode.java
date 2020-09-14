@@ -1,6 +1,8 @@
 package spelling;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 
 /** 
@@ -80,6 +82,21 @@ class TrieNode {
 	public Set<Character> getValidNextCharacters()
 	{
 		return children.keySet();
+	}
+	
+	public void setText(String text) 
+	{
+		this.text = text;
+	}
+	
+	public List<TrieNode> getChildren()
+	{
+		List<TrieNode> allChildren = new ArrayList<TrieNode>();
+		for (TrieNode thisNode : children.values()) {
+			allChildren.add(thisNode);
+		}
+		
+		return allChildren;
 	}
 
 }
