@@ -46,7 +46,7 @@ public class WPTree implements WordPath {
 	    // TODO: Implement this method.
 		
 		if (!nw.dict.isWord(word2)) {
-			System.out.println(word2 + ": is not a word i dictionary");
+			System.out.println(word2 + ": is not a word in Dictionary");
 			return new LinkedList<String>();
 		}
 		
