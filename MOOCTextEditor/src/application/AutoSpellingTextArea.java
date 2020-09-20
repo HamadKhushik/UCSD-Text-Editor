@@ -39,8 +39,8 @@ public class AutoSpellingTextArea extends StyledTextArea<Boolean> {
 
 	// matches case of user typing for auto complete and ss
 	// turn off if handling caps
-	//private boolean matchCase = true;
-	private boolean matchCase = false;
+	private boolean matchCase = true;
+	//private boolean matchCase = false;
 
 	// indices which contain word, set by getWordAtIndex
 	private int startIndex;

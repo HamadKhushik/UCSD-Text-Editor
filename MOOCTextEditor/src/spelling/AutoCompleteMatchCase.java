@@ -187,34 +187,32 @@ public class AutoCompleteMatchCase implements  Dictionary, AutoComplete {
     	 int ref = getCase(prefix);
     	 
     	 
-    	 TrieNode stem = getStem(prefix.toLowerCase());								// using helper method to find the stem for the prefix
+    	 TrieNode stem = getStem(prefix.toLowerCase());					// using helper method to find the stem for the prefix
     	 if (stem == null) {											// if no stem found, return an empty List
     		 return prediction;
     	 }
     	     	 
     	 prediction = bfSearch(stem, numCompletions);					// using helper method to perform Breadth First Search on Trie Tree
     	 
-    	 //if (ref == 1) {
     		 for (int i = 0; i < prediction.size(); i++) {
     			 String temp = prediction.get(i);
-    			 if (ref == 1) {
+    			 if (ref == 1) {										// if prefix is all uppercase, convert prediction to upper case so that completions are in upper case
     			 temp = temp.toUpperCase();
     			 prediction.set(i, temp);
     			 }
-    			 if (ref == 0) {
+    			 if (ref == 0) {										// if first letter of prefix is upper case, convert first letter of every word in prediction to upper case
     				 temp = temp.substring(0, 1).toUpperCase() + temp.substring(1);
     				 prediction.set(i, temp);
     			 }
-    			 if (ref == -1) {
-    				 temp = temp.toLowerCase();
-    				 prediction.set(i, temp);
+    			 if (ref == -1) {										// this block of code might not be necessary
+    				 temp = temp.toLowerCase();							// for everything else, convert prediction to lower case
+    				 prediction.set(i, temp);							
     			 }
     		 }
-    	 //}
          return prediction;												// return the completed List
      }
      
-     // PRIVATE HELPER METHOD FOR PREDICT COMPLETIONS TO FIND THE CASE
+     // PRIVATE HELPER METHOD FOR PREDICT COMPLETIONS TO FIND THE CASE OF UPPER/LOWER CASE LETTERS
      private int getCase(String toCheck) {
     	 
 

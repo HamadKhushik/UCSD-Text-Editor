@@ -22,14 +22,16 @@ public class WPTree implements WordPath {
 	// used to search for nearby Words
 	private NearbyWords nw; 
 	
+	private static final int THRESHOLD = 1000; 
+	
 	// This constructor is used by the Text Editor Application
 	// You'll need to create your own NearbyWords object here.
 	public WPTree () {
 		this.root = null;
 		// TODO initialize a NearbyWords object
-		// Dictionary d = new DictionaryHashSet();
-		// DictionaryLoader.loadDictionary(d, "data/dict.txt");
-		// this.nw = new NearbyWords(d);
+		Dictionary d = new DictionaryHashSet();
+		DictionaryLoader.loadDictionary(d, "data/dict.txt");
+		this.nw = new NearbyWords(d);
 	}
 	
 	//This constructor will be used by the grader code
@@ -42,6 +44,42 @@ public class WPTree implements WordPath {
 	public List<String> findPath(String word1, String word2) 
 	{
 	    // TODO: Implement this method.
+		
+		if (!nw.dict.isWord(word2)) {
+			System.out.println(word2 + ": is not a word i dictionary");
+			return new LinkedList<String>();
+		}
+		
+		List<WPTreeNode> queue = new LinkedList<WPTreeNode>();
+		HashSet<String> visited = new HashSet<String>();
+		WPTreeNode root = new WPTreeNode(word1, null);
+		int count = 0;
+		
+		visited.add(word1);
+		queue.add(root);
+		
+		while (!queue.isEmpty()) {
+			
+			WPTreeNode curr = ((LinkedList<WPTreeNode>)queue).remove();
+			List<String> neighbours = nw.distanceOne(curr.getWord(), true);
+			
+			for (String n : neighbours) {
+				
+				if (!visited.contains(n)) {
+					WPTreeNode child = curr.addChild(n);
+					visited.add(n);
+					queue.add(child);
+					
+					if (child.getWord().equals(word2)) {
+						return child.buildPathToRoot();
+					}
+				}
+			}
+			
+			if (count == THRESHOLD) {
+				return new LinkedList<String>();
+			}
+		}
 	    return new LinkedList<String>();
 	}
 	
@@ -55,6 +93,12 @@ public class WPTree implements WordPath {
 		ret+= "]";
 		return ret;
 	}
+	
+	public static void main(String[] args) {
+    	WPTree test = new WPTree();
+    	List<String> result = test.findPath("the", "kangaroo");
+    	System.out.println(result);
+    }
 	
 }
 
