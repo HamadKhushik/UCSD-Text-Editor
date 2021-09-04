@@ -121,7 +121,7 @@ thee -> theme   results from a character addition (m)
 
 <img src = "./Performane Linked list vs BST.PNG">
 
-![asta la vista ](./'Basic Document vs Efficient Document.JPG' ? raw=true "Title")
+![asta la vista ](https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/Basic%20Document%20vs%20Efficient%20Document.jpg)
 
 ![Flesch Score](Flesch Score.png)
 
