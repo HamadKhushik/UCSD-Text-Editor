@@ -58,13 +58,6 @@ Description
 
 Number of words, number of sentences and number of syllables are calculated using Lists. This process is then made efficient by storing all the details in instance variables in eficientDocument in one pass instead of calulating it in every call to flesch score  
 
-Flesch Score 
--------------
-Flesch Sore is implemented which determines how readable the text is! Flesch score is calculated using the following formula  
-![Flesch Score](https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/FleschScore.png)
-
-#<img src = "https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/FleschScore.png" height="200" #width="1000">
-
 Linked list
 ------------
 Linked List is implemented with all the methods and tests
@@ -98,6 +91,11 @@ Flesch score is calculated in two different ways and is benchmarked for performa
 Spell checking is implemented in two different ways and is then benchmarked for performance analysis. results are plotted and shown below  
 
 ![Linked list vs BST](https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/Performane%20Linked%20list%20vs%20BST.PNG)
+
+Flesch Score 
+-------------
+Flesch Sore is implemented which determines how readable the text is! Flesch score is calculated using the following formula  
+![Flesch Score](https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/FleschScore.png)
 
 ---------------------------------------------------------------------------
 
