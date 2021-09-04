@@ -61,7 +61,7 @@ Number of words, number of sentences and number of syllables are calculated usin
 Flesch Score 
 -------------
 Flesch Sore is implemented which determines how readable the text is! Flesch score is calculated using the following formula  
-![Flesch Score](https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/FleschScore.png =100x20)
+![Flesch Score](https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/FleschScore.png){ height=40% }
 
 Linked list
 ------------
