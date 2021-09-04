@@ -44,12 +44,12 @@ Some aspects of the project are implemented in different ways and then performan
 
 Flesch score is calculated in two different ways and is benchmarked for performance analysis. Results are plotted and shown below    
 
-![Basic Document vs Efficient Document](Basic Document vs Efficient Document.JPG)   
+(https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/Basic%20Document%20vs%20Efficient%20Document.jpg)  
 
 
 Spell checking is implemented in two different ways and is then benchmarked for performance analysis. results are plotted and shown below  
 
-![Performane Linked list vs BST](Performane Linked list vs BST.PNG)   
+(https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/Performane%20Linked%20list%20vs%20BST.PNG)
 
 
 
