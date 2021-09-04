@@ -25,7 +25,7 @@ Description
 Number of words, number of sentences and number of syllables are calculated using Lists. This process is then made efficient by storing all the details in instance variables in eficientDocument in one pass instead of calulating it in every call to flesch score  
 
 Flesch Score calculation is implemented which determines how diffiult a writing is. Flesch score is calculated using the following formula  
-![Flesch Score](Flesch Score.png)
+![Flesch Score](https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/Flesch%20Score.png)
 
 Linked list is implemented with all the methods and tests
 
