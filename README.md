@@ -63,7 +63,7 @@ Flesch Score
 Flesch Sore is implemented which determines how readable the text is! Flesch score is calculated using the following formula  
 ![Flesch Score](https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/FleschScore.png)
 
-<img src = "https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/FleschScore.png" height="50x" width="100">
+<img src = "https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/FleschScore.png" height="500" width="1000">
 
 Linked list
 ------------
