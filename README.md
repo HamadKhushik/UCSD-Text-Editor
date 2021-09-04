@@ -57,35 +57,38 @@ Spell checking is implemented in two different ways and is then benchmarked for 
 ---------------------------------------------------------------------------
 --------------------------------------------------------------------------
 
+Files
+===================
+
 Introduction and Working with Strings
-==============================================
-document.Document.java
-document.BasicDocument.java
+---------------------------------------
+document.Document.java  
+document.BasicDocument.java  
 
 Efficiency Analysis and Benchmarking
-=============================================
-document.EfficientDocument.java
+--------------------------------------
+document.EfficientDocument.java  
 
 Interfaces, Linked Lists vs. Arrays, and Correctness
-=============================================================
-textgen.MyLinkedList*.java
-textgen.MarkovTextGenerator.java
-textgen.MarkovTextGenerator*.java
+--------------------------------------------------------
+textgen.MyLinkedList*.java  
+textgen.MarkovTextGenerator.java  
+textgen.MarkovTextGenerator*.java  
 
 Trees! (including Binary Search Trees and Tries)
-=========================================================
-spelling.SpellingSuggest.java
-spelling.AutoComplete.java
-spelling.Dictionary.java
-spelling.Dictionary*.java
-spelling.AutoCompleteDictionaryTrie.java
-spelling.TrieNode.java
+-----------------------------------------------------
+spelling.SpellingSuggest.java  
+spelling.AutoComplete.java  
+spelling.Dictionary.java  
+spelling.Dictionary*.java  
+spelling.AutoCompleteDictionaryTrie.java  
+spelling.TrieNode.java  
 
 Hash Maps and Edit Distance
-====================================
-spelling.WordPath.java
-spelling.NearbyWords.java
-spelling.WPTree.java
+-----------------------------------------
+spelling.WordPath.java  
+spelling.NearbyWords.java  
+spelling.WPTree.java  
 
 ----------------------------------------------------------------- 
 
