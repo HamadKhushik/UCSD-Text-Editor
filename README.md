@@ -119,7 +119,7 @@ tee -> thee        results from a character addition (e)
 thee -> theme   results from a character addition (m)
 
 
-<img src = "./Basic Document vs Efficient Document.JPG">
+<img src = "./Performane Linked list vs BST.PNG">
 
 ![asta la vista ](./'Basic Document vs Efficient Document.JPG' ? raw=true "Title")
 
