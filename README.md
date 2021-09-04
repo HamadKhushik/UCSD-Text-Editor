@@ -1,8 +1,8 @@
 
-
-
-
-
+  
+  
+  
+  
 -------------------------------------------------------------------------
 
 Outline
@@ -77,7 +77,7 @@ Auto Complete is implemented using the Trie data structure. BFS is used to gener
 
 Spelling suggestion 
 ---------------------
-SPelling Suggestion is implemented using a linked list and BFS algorithm. Spelling suggestion are based off string mutations of the original word. A threshold of 1000 words is enforeced to look for spelling suggestion so as not to deviate too far from the original word.
+Spelling Suggestion is implemented using a linked list and BFS algorithm. Spelling suggestion are based off string mutations of the original word. A threshold of 1000 words is enforeced to look for spelling suggestion so as not to deviate too far from the original word.
 
 Benchmarking
 -------------
