@@ -11,11 +11,7 @@ This project is a text editor with all the features like spelling check, auto co
 A few other features have also been added to this project. It can calculate the flesch score, Markov text generation model has been added, word paths(game - described at the end of the document) has also been implemented
 
 
-Benchmarking between Linked Lists and balanced Binary Search Trees
-Linked Lists and BST are used to store the words as in dictionary
-Markov text generation
-
-BasicDocument vs EffiientDocument - efficient document stores everything in instance variables with one call to getTokens ()
+Benchmarking is used for performance analysis of different implementations
 
 -------------------------------------------------------------------------
 
@@ -62,19 +58,31 @@ Description
 
 Number of words, number of sentences and number of syllables are calculated using Lists. This process is then made efficient by storing all the details in instance variables in eficientDocument in one pass instead of calulating it in every call to flesch score  
 
-Flesch Score calculation is implemented which determines how diffiult a writing is. Flesch score is calculated using the following formula  
-![Flesch Score](https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/FleschScore.png)
+Flesch Score 
+-------------
+Flesch Sore is implemented which determines how readable the text is! Flesch score is calculated using the following formula  
+![Flesch Score](https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/FleschScore.png = 100x20)
 
-Linked list is implemented with all the methods and tests
+Linked list
+------------
+Linked List is implemented with all the methods and tests
 
-Markov text genertion is implemented using linked list(Java Collections frame work). An inner class is used to store a word and all the words following it. 
+Markov text genertion
+-----------------------
+Markov Text Generation is implemented using linked list(Java Collections frame work). An inner class is used to store a word and all the words following it. 
 
-Spell cheking is implemented using linked lists and BST. Ditionaries are implemented to store all the words in the text using linked lists and BST. written text is checked against these dictionaries for spell checking
+Spelling check 
+----------------
+Spell checking is implemented using linked lists and BST. Ditionaries are implemented to store all the words in the text using linked lists and BST. written text is checked against these dictionaries for spell checking
 
-Auto complete is implemented using the Trie data structure. BFS is used to generate all the completions. Auto complete can distinguish between upper case and lower case letters and words generated will be different based on the case of the letters
+Auto complete 
+---------------
+Auto Complete is implemented using the Trie data structure. BFS is used to generate all the completions. Auto complete can distinguish between upper case and lower case letters and words generated will be different based on the case of the letters
 
 
-Spelling suggestion is implemented using a linked list and BFS algorithm. Spelling suggestion are based off string mutations of the original word. A threshold of 1000 words is enforeced to look for spelling suggestion so as not to deviate too far from the original word.
+Spelling suggestion 
+---------------------
+SPelling Suggestion is implemented using a linked list and BFS algorithm. Spelling suggestion are based off string mutations of the original word. A threshold of 1000 words is enforeced to look for spelling suggestion so as not to deviate too far from the original word.
 
 Benchmarking
 -------------
@@ -90,6 +98,9 @@ Spell checking is implemented in two different ways and is then benchmarked for 
 ![Linked list vs BST](https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/Performane%20Linked%20list%20vs%20BST.PNG)
 
 ---------------------------------------------------------------------------
+
+Note
+-------
 
 This is the course project for Course 2 in the
 Java Programming: Object Oriented Design of 
