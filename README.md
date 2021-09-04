@@ -119,6 +119,8 @@ tee -> thee        results from a character addition (e)
 thee -> theme   results from a character addition (m)
 
 
+<img src = "Hammad\Documents\Programming\UCSD\Data Structures And Performance\Week 3/Basic Document vs Efficient Document.JPG">
+
 ![Flesch Score](Flesch Score.png)
 
 ![Basic Document vs Efficient Document](Basic Document vs Efficient Document.JPG)
