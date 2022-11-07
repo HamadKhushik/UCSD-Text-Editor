@@ -15,9 +15,6 @@ Benchmarking is used for performance analysis of different implementations
 
 -------------------------------------------------------------------------
 
---------------------------------------------------------------------------
-
----------------------------------------------------------------------------
 Description
 ==============
 
@@ -60,7 +57,7 @@ Spell checking is implemented in two different ways and is then benchmarked for 
 Flesch Score 
 -------------
 Flesch Sore is implemented which determines how readable the text is! Flesch score is calculated using the following formula  
-![Flesch Score](https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/FleschScore.png)
+![Flesch Score](https://github.com/HamadKhushik/UCSD-Text-Editor/blob/master/MOOCTextEditor/images/FleschScore2.png)
 
 ---------------------------------------------------------------------------
 
