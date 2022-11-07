@@ -17,41 +17,6 @@ Benchmarking is used for performance analysis of different implementations
 
 --------------------------------------------------------------------------
 
-Files
-===================
-
-Introduction and Working with Strings
----------------------------------------
-document.Document.java  
-document.BasicDocument.java  
-
-Efficiency Analysis and Benchmarking
---------------------------------------
-document.EfficientDocument.java  
-
-Interfaces, Linked Lists vs. Arrays, and Correctness
---------------------------------------------------------
-textgen.MyLinkedList*.java  
-textgen.MarkovTextGenerator.java  
-textgen.MarkovTextGenerator*.java  
-
-Trees! (including Binary Search Trees and Tries)
------------------------------------------------------
-spelling.SpellingSuggest.java  
-spelling.AutoComplete.java  
-spelling.Dictionary.java  
-spelling.Dictionary*.java  
-spelling.AutoCompleteDictionaryTrie.java  
-spelling.TrieNode.java  
-
-Hash Maps and Edit Distance
------------------------------------------
-spelling.WordPath.java  
-spelling.NearbyWords.java  
-spelling.WPTree.java  
-
------------------------------------------------------------------ 
-
 ---------------------------------------------------------------------------
 Description
 ==============
@@ -99,19 +64,6 @@ Flesch Sore is implemented which determines how readable the text is! Flesch sco
 
 ---------------------------------------------------------------------------
 
-Note
--------
-
-This is the course project for Course 2 in the
-Java Programming: Object Oriented Design of 
-Data Structures Specialization
-
-Starter Code and GUI Application for has been provided along with grading previews and 
-testing files to be used in completing the course programming 
-assignments. 
-
--------------------------------------------------------------------------
-
 Word Paths 
 -------------
 It is a game where we'll try to find a path from one word to another with the restriction that we can only make one change at a time (letter permutation, letter insertion, letter deletion) and that whatever change we make, has to result in a real word.
@@ -130,4 +82,53 @@ tee -> thee        results from a character addition (e)
 
 thee -> theme   results from a character addition (m)
 
----------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+
+Files
+===================
+
+Introduction and Working with Strings
+---------------------------------------
+document.Document.java  
+document.BasicDocument.java  
+
+Efficiency Analysis and Benchmarking
+--------------------------------------
+document.EfficientDocument.java  
+
+Interfaces, Linked Lists vs. Arrays, and Correctness
+--------------------------------------------------------
+textgen.MyLinkedList*.java  
+textgen.MarkovTextGenerator.java  
+textgen.MarkovTextGenerator*.java  
+
+Trees! (including Binary Search Trees and Tries)
+-----------------------------------------------------
+spelling.SpellingSuggest.java  
+spelling.AutoComplete.java  
+spelling.Dictionary.java  
+spelling.Dictionary*.java  
+spelling.AutoCompleteDictionaryTrie.java  
+spelling.TrieNode.java  
+
+Hash Maps and Edit Distance
+-----------------------------------------
+spelling.WordPath.java  
+spelling.NearbyWords.java  
+spelling.WPTree.java  
+
+----------------------------------------------------------------- 
+
+Note
+-------
+
+This is the course project for Course 2 in the
+Java Programming: Object Oriented Design of 
+Data Structures Specialization
+
+Starter Code and GUI Application for has been provided along with grading previews and 
+testing files to be used in completing the course programming 
+assignments. 
+
+-------------------------------------------------------------------------
+-------------------------------
