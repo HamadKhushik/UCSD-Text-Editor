@@ -22,7 +22,7 @@ Number of words, number of sentences and number of syllables are calculated usin
 
 Linked list
 ------------
-Linked List is implemented with all the methods and tests
+Linked List is implemented from scratch with all the methods and tests
 
 Markov text genertion
 -----------------------
