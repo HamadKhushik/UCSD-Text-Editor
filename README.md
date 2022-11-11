@@ -82,7 +82,7 @@ thee -> theme   results from a character addition (m)
 --------------------------------------------------------------------------------------
 
 Files
-===================
+--------
 
 Introduction and Working with Strings
 ---------------------------------------
