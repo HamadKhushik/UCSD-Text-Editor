@@ -15,8 +15,11 @@ Benchmarking is used for performance analysis of different implementations.
 
 -------------------------------------------------------------------------
 
-<video src=images/TextEditorDemo.mp4 width=180/>
+<video src=https://youtu.be/1DnDTxpIClE width=180/>
 
+https://img.youtube.com/vi/1DnDTxpIClE/hqdefault.jpg
+
+[![](https://img.youtube.com/vi/1DnDTxpIClE/hqdefault.jpg)](https://youtu.be/1DnDTxpIClE)
 
 Description
 ------------
